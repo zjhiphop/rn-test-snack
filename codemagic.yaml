@@ -51,6 +51,8 @@ workflows:
     name: React Native IOS Unit Test and Integration Test
     max_build_duration: 120
     instance_type: mac_mini_m1
+    integrations:
+      app_store_connect: MingKeys
     environment:
       ios_signing:
         distribution_type: app_store

@@ -14,4 +14,5 @@ module.exports = {
   testPathIgnorePatterns: ["<rootDir>/node_modules/", "/detox", "@react-native"],
   testEnvironment: "jsdom",
   setupFiles: ["<rootDir>/test/setup.ts"],
+  setupFilesAfterEnv: ['@testing-library/jest-native/extend-expect'],
 }

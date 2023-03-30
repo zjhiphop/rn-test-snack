@@ -9,7 +9,7 @@ workflows:
       groups:
         - google_play
       vars:
-        PACKAGE_NAME: "com.inseadapp"
+        PACKAGE_NAME: "demo.minglabs.codemagic.app"
     scripts:
       - name: Set Android SDK location
         script: | 
@@ -54,9 +54,9 @@ workflows:
     environment:
       ios_signing:
         distribution_type: app_store
-        bundle_identifier: com.inseadapp
+        bundle_identifier: demo.minglabs.codemagic.app
       vars:
-        BUNDLE_ID: "com.inseadapp"
+        BUNDLE_ID: "demo.minglabs.codemagic.app"
         XCODE_WORKSPACE: "InseadApp.xcworkspace" # <-- Put the name of your Xcode workspace here
         XCODE_SCHEME: "InseadApp" # <-- Put the name of your Xcode scheme here
         APP_ID: 64255965a16750d9dc1165aa
@@ -93,9 +93,9 @@ workflows:
     environment:
       ios_signing:
         distribution_type: app_store
-        bundle_identifier: com.inseadapp
+        bundle_identifier: demo.minglabs.codemagic.app
       vars:
-        BUNDLE_ID: "com.inseadapp"
+        BUNDLE_ID: "demo.minglabs.codemagic.app"
         XCODE_WORKSPACE: "InseadApp.xcworkspace" # <-- Put the name of your Xcode workspace here
         XCODE_SCHEME: "InseadApp" # <-- Put the name of your Xcode scheme here
         APP_ID: 64255965a16750d9dc1165aa

@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.inseadapp">
+  package="demo.minglabs.codemagic.app">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -7,8 +7,8 @@
       <intent>
         <action android:name="android.intent.action.VIEW" />
         <data android:scheme="https"/>
-      </intent>
-    </queries>
+    </intent>
+  </queries>
 
     <application
       android:name=".MainApplication"
@@ -27,7 +27,7 @@
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-      </activity>
-    </application>
+      </intent-filter>
+    </activity>
+  </application>
 </manifest>

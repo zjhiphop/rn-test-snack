@@ -1,6 +1,7 @@
-import * as React from "react"
-import { StyleProp, TextStyle, View, ViewStyle } from "react-native"
 import { observer } from "mobx-react-lite"
+import * as React from "react"
+import { Image, StyleProp, TextStyle, View, ViewStyle } from "react-native"
+import HomeIcon from "../assets/svg/home.svg"
 import { colors, typography } from "../theme"
 import { Text } from "./Text"
 
@@ -21,6 +22,11 @@ export const Profile = observer(function Profile(props: ProfileProps) {
   return (
     <View style={$styles}>
       <Text style={$text}>Hello</Text>
+      <Image
+        accessibilityLabel="welcome face"
+        source={require("../../assets/images/welcome-face.png")}
+      />
+      <HomeIcon accessibilityLabel="home svg" fill="gray" width={100} height={100}></HomeIcon>
     </View>
   )
 })

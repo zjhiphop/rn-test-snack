@@ -122,6 +122,9 @@ This directory will hold your Jest configs and mocks.
 
 Read [Detox setup instructions](./detox/README.md).
 
+## Using testing-library to run smoke test without using device or simulator
+https://reactnativetesting.io/component/setup
+
 ## Previous Boilerplates
 
 - [2018 aka Bowser](https://github.com/infinitered/ignite-bowser)

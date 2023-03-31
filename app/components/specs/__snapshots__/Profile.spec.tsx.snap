@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "justifyContent": "center",
+      },
+      undefined,
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {},
+        Array [
+          Object {
+            "fontSize": 16,
+            "lineHeight": 24,
+          },
+          Object {
+            "fontFamily": "spaceGroteskRegular",
+          },
+          Object {
+            "color": "#191015",
+          },
+        ],
+        undefined,
+        undefined,
+        Object {
+          "color": "#C76542",
+          "fontFamily": "spaceGroteskRegular",
+          "fontSize": 14,
+        },
+      ]
+    }
+  >
+    Hello
+  </Text>
+  <RCTImageView
+    accessibilityLabel="welcome face"
+    internal_analyticTag={null}
+    resizeMode="cover"
+    source={
+      Array [
+        Object {
+          "height": undefined,
+          "uri": undefined,
+          "width": undefined,
+        },
+      ]
+    }
+    style={
+      Object {
+        "height": undefined,
+        "overflow": "hidden",
+        "width": undefined,
+      }
+    }
+  />
+  <SvgMock
+    accessibilityLabel="home svg"
+    fill="gray"
+    height={100}
+    width={100}
+  />
+</View>
+`;

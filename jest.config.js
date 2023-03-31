@@ -13,7 +13,7 @@ module.exports = {
   ],
   testPathIgnorePatterns: ["<rootDir>/node_modules/", "/detox", "@react-native"],
   testEnvironment: "jsdom",
-  setupFiles: ["<rootDir>/test/setup.ts"],
+  setupFiles: ["<rootDir>/test/setup.ts", "<rootDir>/test/setupStore.ts"],
   setupFilesAfterEnv: ['<rootDir>/test/setupAfter.ts'],
   moduleNameMapper: {
     "\\.svg": "<rootDir>/test/svgMock.ts"

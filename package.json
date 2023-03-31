@@ -140,6 +140,11 @@
     "singleQuote": false,
     "trailingComma": "all"
   },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.svg": "<rootDir>/test/svgMock.ts"
+    }
+  },
   "detox": {
     "test-runner": "jest",
     "runnerConfig": "./detox/config.json",

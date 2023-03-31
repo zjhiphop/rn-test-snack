@@ -1,7 +1,7 @@
 import { observer } from "mobx-react-lite"
 import * as React from "react"
 import { Image, Pressable, StyleProp, TextInput, TextStyle, View, ViewStyle } from "react-native"
-import HomeIcon from "../../assets/svg/home.svg"
+
 import { colors, typography } from "../theme"
 import { Text } from "./Text"
 
@@ -18,6 +18,10 @@ export interface ProfileProps {
 export const Profile = observer(function Profile(props: ProfileProps) {
   const { style } = props
   const $styles = [$container, style]
+  // test mocked store
+  // const store = useStores()
+  // console.log(store)
+  const HomeIcon = require("../../assets/svg/home.svg")
 
   return (
     <View style={$styles}>

@@ -3,6 +3,7 @@ import mockAsyncStorage from "@react-native-async-storage/async-storage/jest/asy
 import * as ReactNative from "react-native"
 import mockFile from "./mockFile"
 
+
 // libraries to mock
 jest.doMock("react-native", () => {
   // Extend ReactNative
@@ -36,6 +37,7 @@ jest.mock("i18n-js", () => ({
 declare const tron // eslint-disable-line @typescript-eslint/no-unused-vars
 
 jest.useFakeTimers()
+
 declare global {
   let __TEST__
 }

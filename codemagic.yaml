@@ -78,6 +78,7 @@ workflows:
         script: xcode-project use-profiles
       - name: Run Unit test
         script: | 
+          mkdir -p test-results
           yarn test > test-results/unit-test
         test_report: 
           test-results/unit-test
@@ -86,6 +87,7 @@ workflows:
           yarn build:detox
       - name: Run Detox test
         script: | 
+          mkdir -p test-results
           yarn test > test-results/detox
         test_report: 
           test-results/detox

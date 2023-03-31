@@ -1,8 +1,8 @@
 // https://reactnativetesting.io/component/testing/
-
-import { render, screen } from "@testing-library/react-native"
+// https://github.com/testing-library/jest-native
+import { fireEvent, render, screen } from "@testing-library/react-native"
 import React from "react"
-import { Profile } from "../Profile"
+import { NewMessageForm, Profile } from "../Profile"
 
 describe("Profile", () => {
   beforeEach(() => {
@@ -18,5 +18,16 @@ describe("Profile", () => {
 
   it('display "home" svg icon', () => {
     expect(screen.getByLabelText("home svg")).toBeVisible()
+  })
+})
+
+describe("Message", () => {
+  describe("clicking send", () => {
+    it("clears the message field", () => {
+      render(<NewMessageForm />)
+
+      fireEvent.changeText(screen.getByPlaceholderText("Message"), "Hello world")
+      fireEvent.press(screen.getByText("Send"))
+    })
   })
 })

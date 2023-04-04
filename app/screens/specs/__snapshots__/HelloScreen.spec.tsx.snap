@@ -26,3 +26,17 @@ exports[`Hello Renders Snapshot correctly 1`] = `
   Hello
 </Text>
 `;
+
+exports[`Hello Renders screen Test HelloScreen 1`] = `
+<RNCSafeAreaProvider
+  onInsetsChange={[Function]}
+  style={
+    Array [
+      Object {
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }
+/>
+`;

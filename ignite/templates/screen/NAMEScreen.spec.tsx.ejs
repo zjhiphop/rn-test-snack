@@ -2,12 +2,13 @@
 destinationDir: app/screens/specs
 ---
 // https://reactnativetesting.io/component/testing/
-
+import { RouteProp } from "@react-navigation/native"
+import { render } from "@testing-library/react-native"
 import React from "react"
-import { fireEvent, render, screen } from "@testing-library/react-native"
 import { SafeAreaProvider } from "react-native-safe-area-context"
 import renderer from "react-test-renderer"
-import { <%= props.pascalCaseName %>ScreenComponent } from "../<%= props.pascalCaseName %>Screen"
+import { AppStackParamList } from "../../navigators"
+import { <%= props.pascalCaseName %>Screen, <%= props.pascalCaseName %>ScreenComponent } from "../<%= props.pascalCaseName %>Screen"
 
 describe("<%= props.pascalCaseName %>", () => {
   it("renders <%= props.pascalCaseName %>ScreenComponent component", () => {
@@ -22,6 +23,31 @@ describe("<%= props.pascalCaseName %>", () => {
       )
       .toJSON()
     expect(tree).toMatchSnapshot()
+  })
+
+  describe("Renders screen", () => {
+    let navigation
+    const route: RouteProp<AppStackParamList, "<%= props.pascalCaseName %>"> = {
+      key: "<%= props.pascalCaseName %>Screen",
+      name: "<%= props.pascalCaseName %>",
+    }
+
+    beforeEach(() => {
+      navigation = {
+        dispatch: jest.fn(),
+      }
+    })
+
+    test("Test <%= props.pascalCaseName %>Screen", () => {
+      const tree = renderer
+        .create(
+          <SafeAreaProvider>
+            <<%= props.pascalCaseName %>Screen navigation={navigation} route={route} />
+          </SafeAreaProvider>,
+        )
+        .toJSON()
+      expect(tree).toMatchSnapshot()
+    })
   })
 
 })

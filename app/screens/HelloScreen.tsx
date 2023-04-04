@@ -24,7 +24,7 @@ export const HelloScreenComponent = observer(function HelloScreen() {
   return <Text text="Hello" />
 })
 
-interface HelloScreenProps extends AppStackScreenProps<"Hello"> {}
+export interface HelloScreenProps extends AppStackScreenProps<"Hello"> {}
 
 export const HelloScreen: FC<HelloScreenProps> = observer(function HelloScreen() {
   return (

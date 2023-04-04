@@ -14,15 +14,21 @@ import { Screen, Text } from "../components"
 
 // REMOVE ME! ⬇️ This TS ignore will not be necessary after you've added the correct navigator param type
 // @ts-ignore
-export const HelloScreen = observer(function HelloScreen() {
+export const HelloScreenComponent = observer(function HelloScreen() {
   // Pull in one of our MST stores
   // const { someStore, anotherStore } = useStores()
 
   // Pull in navigation via hook
   // const navigation = useNavigation()
+  return <Text text="Hello" />
+})
+
+interface HelloScreenProps extends AppStackScreenProps<"Hello"> {}
+
+export const HelloScreen: FC<HelloScreenProps> = observer(function HelloScreen() {
   return (
     <Screen style={$root} preset="scroll">
-      <Text text="hello 1" />
+      <HelloScreenComponent></HelloScreenComponent>
     </Screen>
   )
 })

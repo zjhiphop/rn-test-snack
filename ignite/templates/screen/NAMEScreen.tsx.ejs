@@ -22,7 +22,7 @@ import { Screen, Text } from "../components"
 
 // REMOVE ME! ⬇️ This TS ignore will not be necessary after you've added the correct navigator param type
 // @ts-ignore
-export const <%= props.pascalCaseName %>Screen: FC<StackScreenProps<AppStackScreenProps, "<%= props.pascalCaseName %>">> = observer(function <%= props.pascalCaseName %>Screen() {
+export const <%= props.pascalCaseName %>ScreenComponent = observer(function <%= props.pascalCaseName %>ScreenComponent() {
   // Pull in one of our MST stores
   // const { someStore, anotherStore } = useStores()
 
@@ -31,6 +31,14 @@ export const <%= props.pascalCaseName %>Screen: FC<StackScreenProps<AppStackScre
   return (
     <Screen style={$root} preset="scroll">
       <Text text="<%= props.camelCaseName %>" />
+    </Screen>
+  )
+})
+
+export const <%= props.pascalCaseName %>Screen: FC<StackScreenProps<AppStackScreenProps, "<%= props.pascalCaseName %>">> = observer(function <%= props.pascalCaseName %>Screen() {
+  return (
+    <Screen style={$root} preset="scroll">
+      <<%= props.pascalCaseName %>ScreenComponent></<%= props.pascalCaseName %>ScreenComponent>
     </Screen>
   )
 })

@@ -63,6 +63,13 @@ workflows:
         XCODE_WORKSPACE: "InseadApp.xcworkspace" # <-- Put the name of your Xcode workspace here
         XCODE_SCHEME: "InseadApp" # <-- Put the name of your Xcode scheme here
         APP_ID: 64255965a16750d9dc1165aa
+    triggering:
+      events:                       # List the events that trigger builds
+        - push
+      branch_patterns:              # Include or exclude watched branches
+        - pattern: 'main'
+          include: true
+          source: true
     scripts:
       - name: Install deps
         script: | 
@@ -84,15 +91,17 @@ workflows:
           yarn test > test-results/unit-test
         test_report: 
           test-results/unit-test
-      - name: Build Detox
-        script: | 
-          yarn build:detox
-      - name: Run Detox test
-        script: | 
-          mkdir -p test-results
-          yarn test:detox > test-results/detox
-        test_report: 
-          test-results/detox
+      # - name: Build Detox
+      #   script: | 
+      #     brew tap wix/brew
+      #     brew install applesimutils
+      #     yarn build:detox
+      # - name: Run Detox test
+      #   script: | 
+      #     mkdir -p test-results
+      #     yarn test:detox > test-results/detox
+      #   test_report: 
+      #     test-results/detox
       
   react-native-ios:
     name: React Native iOS

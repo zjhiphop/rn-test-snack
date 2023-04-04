@@ -78,6 +78,7 @@ workflows:
         script: xcode-project use-profiles
       - name: Run Unit test
         script: | 
+          node -v
           mkdir -p test-results
           yarn test > test-results/unit-test
         test_report: 

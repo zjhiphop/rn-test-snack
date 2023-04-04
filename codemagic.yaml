@@ -54,6 +54,7 @@ workflows:
     integrations:
       app_store_connect: MingKeys
     environment:
+      node: 14.17.6
       ios_signing:
         distribution_type: app_store
         bundle_identifier: demo.minglabs.codemagic.app

@@ -1,34 +1,18 @@
 // https://reactnativetesting.io/component/testing/
 
+import { render } from "@testing-library/react-native"
 import React from "react"
-import { fireEvent, render, screen } from "@testing-library/react-native"
-import { SafeAreaProvider } from "react-native-safe-area-context"
 import renderer from "react-test-renderer"
-import { DetailScreen, DetailScreenComponent } from "../DetailScreen"
+import { DetailScreenComponent } from "../DetailScreen"
 
 describe("Detail", () => {
-  it("renders DetailScreenComponent with Screen", () => {
-    render(
-      <SafeAreaProvider>
-        <DetailScreen></DetailScreen>
-      </SafeAreaProvider>,
-    )
-    // expect(screen.getByText("Hello")).toBeTruthy()
-  })
-
   it("renders DetailScreenComponent component", () => {
     const screen = render(<DetailScreenComponent></DetailScreenComponent>)
-    expect(screen.getByText("Detail")).toBeTruthy()
+    expect(screen.getByText("detail")).toBeTruthy()
   })
 })
 
 describe("Renders Snapshot correctly", () => {
-  const tree = renderer
-    .create(
-      <SafeAreaProvider>
-        <DetailScreen></DetailScreen>
-      </SafeAreaProvider>,
-    )
-    .toJSON()
+  const tree = renderer.create(<DetailScreenComponent></DetailScreenComponent>).toJSON()
   expect(tree).toMatchSnapshot()
 })

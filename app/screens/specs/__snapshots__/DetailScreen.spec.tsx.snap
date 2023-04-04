@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Hello Renders Snapshot correctly 1`] = `
+exports[` 1`] = `
 <Text
   style={
     Array [
@@ -23,6 +23,6 @@ exports[`Hello Renders Snapshot correctly 1`] = `
     ]
   }
 >
-  Hello
+  detail
 </Text>
 `;

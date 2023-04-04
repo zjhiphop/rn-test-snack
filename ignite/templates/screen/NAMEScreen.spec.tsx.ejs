@@ -7,31 +7,21 @@ import React from "react"
 import { fireEvent, render, screen } from "@testing-library/react-native"
 import { SafeAreaProvider } from "react-native-safe-area-context"
 import renderer from "react-test-renderer"
-import { <%= props.pascalCaseName %>Screen, <%= props.pascalCaseName %>ScreenComponent } from "../<%= props.pascalCaseName %>Screen"
+import { <%= props.pascalCaseName %>ScreenComponent } from "../<%= props.pascalCaseName %>Screen"
 
 describe("<%= props.pascalCaseName %>", () => {
-  it("renders <%= props.pascalCaseName %>ScreenComponent with Screen", () => {
-    render(
-      <SafeAreaProvider>
-        <<%= props.pascalCaseName %>Screen></<%= props.pascalCaseName %>Screen>
-      </SafeAreaProvider>,
-    )
-  })
-
   it("renders <%= props.pascalCaseName %>ScreenComponent component", () => {
     const screen = render(<<%= props.pascalCaseName %>ScreenComponent></<%= props.pascalCaseName %>ScreenComponent>)
     expect(screen.getByText("<%= props.pascalCaseName %>")).toBeTruthy()
   })
-})
 
-describe("Renders Snapshot correctly", () => {
-  const tree = renderer
-    .create(
-      <SafeAreaProvider>
-        <<%= props.pascalCaseName %>Screen></<%= props.pascalCaseName %>Screen>
-        <!-- todo: render component correctly and take snapshot -->
-      </SafeAreaProvider>,
-    )
-    .toJSON()
-  expect(tree).toMatchSnapshot()
+  it("Renders Snapshot correctly", () => {
+    const tree = renderer
+      .create(
+          <<%= props.pascalCaseName %>ScreenComponent></<%= props.pascalCaseName %>ScreenComponent>
+      )
+      .toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
 })

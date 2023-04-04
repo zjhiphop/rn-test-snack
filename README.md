@@ -131,3 +131,20 @@ https://reactnativetesting.io/component/setup
 - [2017 aka Andross](https://github.com/infinitered/ignite-andross)
 - [2016 aka Ignite 1.0](https://github.com/infinitered/ignite-ir-boilerplate-2016)
 
+## Known Issues
+* Unit test not works in CodeMagic
+```
+FAIL test/i18n.test.ts
+  ● Test suite failed to run
+
+    TypeError: Cannot redefine property: performance
+
+      at Object.<anonymous> (node_modules/react-native/jest/setup.js:408:20)
+
+FAIL app/services/api/apiProblem.test.ts
+  ● Test suite failed to run
+
+    TypeError: Cannot redefine property: performance
+
+      at Object.<anonymous> (node_modules/react-native/jest/setup.js:408:20)
+```

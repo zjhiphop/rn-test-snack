@@ -32,7 +32,9 @@
     "expo:build:detox": "detox build -c ios.sim.expo",
     "expo:test:detox": "./bin/downloadExpoApp.sh && detox test --configuration ios.sim.expo"
   },
-  "node": ">=14.17.6 <19.0.0",
+  "engines": {
+    "node": ">=14.17.6 <19.0.0"
+  },
   "overrides": {
     "react-error-overlay": "6.0.9"
   },

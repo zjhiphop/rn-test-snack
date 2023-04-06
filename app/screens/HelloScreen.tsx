@@ -21,7 +21,7 @@ export const HelloScreenComponent = observer(function HelloScreen() {
 
   // Pull in navigation via hook
   // const navigation = useNavigation()
-  return <Text text="Hello" />
+  return <Text text="Hello test" />
 })
 
 export interface HelloScreenProps extends AppStackScreenProps<"Hello"> {}

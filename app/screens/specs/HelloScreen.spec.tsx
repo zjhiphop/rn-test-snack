@@ -11,7 +11,7 @@ import { HelloScreen, HelloScreenComponent } from "../HelloScreen"
 describe("Hello", () => {
   it("renders HelloScreen component", () => {
     const screen = render(<HelloScreenComponent></HelloScreenComponent>)
-    expect(screen.getByText("Hello")).toBeTruthy()
+    expect(screen.getByText("Hello test")).toBeTruthy()
   })
 
   it("Renders Snapshot correctly", () => {

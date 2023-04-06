@@ -21,7 +21,7 @@ export const Profile = observer(function Profile(props: ProfileProps) {
   // test mocked store
   // const store = useStores()
   // console.log(store)
-  const HomeIcon = require("../../assets/svg/home.svg")
+  // const HomeIcon = require("../../assets/svg/home.svg")
 
   return (
     <View style={$styles}>
@@ -30,7 +30,7 @@ export const Profile = observer(function Profile(props: ProfileProps) {
         accessibilityLabel="welcome face"
         source={require("../../assets/images/welcome-face.png")}
       />
-      <HomeIcon accessibilityLabel="home svg" fill="gray" width={100} height={100}></HomeIcon>
+      {/* <HomeIcon accessibilityLabel="home svg" fill="gray" width={100} height={100}></HomeIcon> */}
     </View>
   )
 })

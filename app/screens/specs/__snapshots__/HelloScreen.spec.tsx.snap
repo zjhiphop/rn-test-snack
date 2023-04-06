@@ -23,7 +23,7 @@ exports[`Hello Renders Snapshot correctly 1`] = `
     ]
   }
 >
-  Hello
+  Hello test
 </Text>
 `;
 
